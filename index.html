@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainimg{
+            width: 400px;
+            height: 400px;
+            object-fit:fill;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgb(66, 66, 66);
+            border: none;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .img-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-img{
+            height: 70px;
+            width: 70px;
+            cursor: pointer;
+            margin: 10px ;
+            box-shadow: 0px 0px 10px 0px rgb(66, 66, 66);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./mobile1.webp" id="mainimg"/>
+    <div class="img-container">
+    <img src="./mobile1.webp" class="product-img" onclick="changeimg(1)"/>
+    <img src="./mobile2.jpg" class="product-img" onclick="changeimg(2)"/>
+    <img src="./mobile3.jpg" class="product-img" onclick="changeimg(3)"/>
+    <img src="./mobile4.png" class="product-img" onclick="changeimg(4)"/>
+    </div>
+
+    <script>
+        function changeimg(num){
+            const mainimg = document.getElementById('mainimg')
+            if(num==1){
+                mainimg.src = "mobile1.webp"
+            }else if(num==2){
+                mainimg.src = "mobile2.jpg"
+            }else if(num==3){
+                mainimg.src = "mobile3.jpg"
+            }else if(num==4){
+                mainimg.src = "mobile4.png"
+            }
+        }
+    </script>
+</body>
+</html>
